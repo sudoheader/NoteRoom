@@ -19,6 +19,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/action_page.blade.php', function () {
-    return view('action');
-});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
