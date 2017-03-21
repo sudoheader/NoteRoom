@@ -76,7 +76,8 @@
                     @endif
                 </div>
             @endif
-
+            <a href="/noteroom/public/noteroom" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Let's get this shit started</a>
+            <br></br>
             <div class="content">
                 <div class="title m-b-md">
                     Laravel

@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/noteroom', function () {
+    return view('noteroom');
+});
+
+Route::get('/binder', function () {
+    return view('binder');
+});
