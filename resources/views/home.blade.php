@@ -9,6 +9,7 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+    <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 
     <style>
           body{margin-top:50px;}
@@ -75,18 +76,21 @@
 
 
         <div class="col-sm-9 col-md-9">
-            <div class="well">
-                <h1>
-                    Accordion Menu With Icon</h1>
-                Admin Dashboard Accordion Menu
-            </div>
-
+                           
+                    <!-- Create the editor container -->
+                    <div id="editor">
+                      
+                    </div>
+               
+       
           <form action="">
 
         <label for="question">Ask a question</label>
         <input id="question" autocomplete="off"  placeholder="Enter question"/> <button type="submit" class="btn btn-primary">Submit</button>
 
-    </form>
+         </form>
+
+         <!-- </div> -->
 
 
 
@@ -102,20 +106,20 @@
         </div>
     
     </div>
+
+
+
+  <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+ 
+   
     
-
-    
-
-
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="\NoteRoom\node_modules\socket.io-client\dist\socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+     <!-- Initialize Quill editor -->
+    <script src = "\NoteRoom\public\js\quillCode.js"></script> 
+    
     <script src = "\NoteRoom\public\js\client.js"></script>
 
 

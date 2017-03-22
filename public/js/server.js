@@ -22,6 +22,16 @@ io.on('connection', function(socket){
     console.log('message to server');
   });
 
+    //handles what occurs when text is changed
+    socket.on('textUp', function(delta){
+
+    	socket.broadcast.emit('dataToClient', delta);
+    	console.log('text box has changed!');
+
+    });
+
+
+
 });
 
  
