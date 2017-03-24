@@ -20,52 +20,31 @@ var toolbarOptions = [
 
 
 
-var socket = io.connect( 'http://'+window.location.hostname+':3000' );
+
+  var socket = io.connect( 'http://'+window.location.hostname+':3000' );
 
   var quill = new Quill('#editor', {
     modules: { toolbar: toolbarOptions },
     theme: 'snow'
   });
 
- // quill.on('text-change', update);
-  quill.on('text-change', updateText);
 
-  //$('#editor').on('keydown',function(){
+  quill.on('text-change', function(delta, oldDelta, source){
 
-   // quill.on('text-change', updateText);
-    var delta = quill.getContents();
-    socket.emit('textUp', delta);
+    if(source == 'user'){ //source of the major bug
+  
+     socket.emit('textUp',  {'delta': JSON.stringify(delta)});
 
-  //});
+    }
+ 
+  });
 
-var container = document.querySelector('#delta-container');
-//update();
-//updateText();
 
-function update(delta) {
-  var contents = quill.getContents();
-  console.log('contents', contents);
- // var html = "contents = " + JSON.stringify(contents, null, 2);
 
-  if (delta) {
-    console.log('change', delta)
-    //html = "change = " + JSON.stringify(delta, null, 2) + "\n\n" + html;
-  }
+  socket.on('dataToClient', function(data){
 
- // container.innerHTML = html;
-  //hljs.highlightBlock(container);
-}
-
-function updateText(delta){
-
-  socket.emit('textUp', delta);
-
-}
-
-socket.on('dataToClient', function(delta){
-           //quill.setText('testing\n');
-                quill.updateContents(delta.ops);
-               //$('#editor').append($('<p>').text(delta.ops[0].insert));
-               console.log('test');
+          var del = JSON.parse(data.delta);
+          quill.updateContents(del); 
+          console.log('test');
     
-            });
+  });

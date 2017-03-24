@@ -120,7 +120,8 @@
      <!-- Initialize Quill editor -->
     <script src = "\NoteRoom\public\js\quillCode.js"></script> 
     
-    <script src = "\NoteRoom\public\js\client.js"></script>
+   {{--  temporarily commented to separate ask a question function from quill stuff - will need to integrate later... --}}
+    {{-- <script src = "\NoteRoom\public\js\client.js"></script> --}}
 
 
   </body>
