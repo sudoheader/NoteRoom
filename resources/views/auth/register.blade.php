@@ -60,6 +60,46 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+                            <label for="school" class="col-md-4 control-label">School</label>
+
+                            <div class="col-md-6">
+                                <input id="school" type="text" class="form-control" name="school" required>
+
+                                @if ($errors->has('school'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('school') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
+                            <label for="role" class="col-md-4 control-label">Role</label>
+
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="role" id="role" value="option1" checked>
+                                    Student                         
+                                    </label>
+                                </div>
+
+                                <div class="form-check disabled">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="role" id="role" value="option2" disabled>
+                                    Teacher (alpha)
+                                    </label>
+                                </div>
+
+                                @if ($errors->has('role'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
