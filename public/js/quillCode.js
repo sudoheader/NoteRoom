@@ -19,14 +19,27 @@ var toolbarOptions = [
 ];
 
 
-
-
   var socket = io.connect( 'http://'+window.location.hostname+':3000' );
+
+  //var Delta = Quill.import('delta');
+
 
   var quill = new Quill('#editor', {
     modules: { toolbar: toolbarOptions },
     theme: 'snow'
   });
+
+
+//   var change = new Delta();
+
+//   quill.on('text-change', function(delta) {
+//     change = change.compose(delta);
+
+
+//      $.post('\NoteRoom\public\js\client.js', { 
+//       doc: JSON.stringify(quill.getContents())
+//     });
+// });
 
 
   quill.on('text-change', function(delta, oldDelta, source){
