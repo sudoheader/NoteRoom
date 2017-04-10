@@ -12,6 +12,6 @@
 */
 //Noteroom/public/...
 Route::get('/', function () {
-	return view('home');
+	return view('notes');
     // return view('welcome');
 });
