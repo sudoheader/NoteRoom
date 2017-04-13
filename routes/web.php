@@ -10,8 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Noteroom/public/...
-Route::get('/', function () {
+
+
+/*
+|--------------------------------------------------------------------------
+| Noteroom Routes
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('/noteroom', function () {
 	return view('notes');
-    // return view('welcome');
 });
