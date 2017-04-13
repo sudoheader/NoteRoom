@@ -7,6 +7,13 @@
 	color:black;
 }
 
+.panel-heading {
+  padding-bottom: 0px;
+}
+
+.panel-body {
+  padding-bottom: 0px;
+}
 /*#accordion{
 	
 	padding-left: 10px;

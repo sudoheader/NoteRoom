@@ -25,8 +25,8 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              {{-- <div class="panel-group"> --}}
-                <div class="panel-heading" id="accordion">
+              <div class="panel-group" id="accordion" style="margin-bottom: 0px;">
+                <div class="panel-heading">
                   <a href="#collapseOne" class ="dropdown-item" data-toggle="collapse" data-parent="#accordion">My Noterooms</a>
                  <div class="panel-collapse collapse" id="collapseOne"> 
                     <div class="panel-body"> 
@@ -36,7 +36,6 @@
                     </div>
                   </div>
                 </div>
-              {{-- </div> --}}
               <div class="panel-heading">
                 <a href="#collapseTwo" class ="dropdown-item" data-toggle="collapse" data-parent="#accordion">Join Noteroom</a>
                 <div class="panel-collapse collapse" id="collapseTwo"> 
@@ -57,6 +56,7 @@
                   <a href="#" class ="dropdown-item">Create Noteroom</a>
                 </div>
               </li>
+              </div>
             </ul>
           </li>
         </ul>
@@ -78,7 +78,6 @@
 @yield('content')
 
   <script>
-    $(document).ready(function() {
       $('.dropdown-accordion').on('show.bs.dropdown', function (event) {
         var accordion = $(this).find($(this).data('accordion'));
         accordion.find('.panel-collapse.in').collapse('hide');
@@ -91,7 +90,6 @@
         $($(this).data('parent')).find('.panel-collapse.in').collapse('hide');
         $($(this).attr('href')).collapse('show');
       });
-    })
   </script>
 </body>
 </html>
