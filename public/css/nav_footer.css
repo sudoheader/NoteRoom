@@ -27,3 +27,21 @@
 	padding: 123px 0px 0px 0px;  
 }*/
 
+footer {
+    text-align: center;
+    background: #2B2D42;
+    color: #8D99AE;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.footerElems a{
+	font-size:15px;
+	margin:0 20px;
+}
+
+.logos{
+	font-size:1.5em;
+}

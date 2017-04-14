@@ -11,19 +11,20 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
   </script>
-  <link rel= "stylesheet" href="\NoteRoom\public\css\nav_bar.css">
+  <link rel="stylesheet" href="\NoteRoom\font-awesome-4.7.0\css\font-awesome.min.css">
+  <link rel= "stylesheet" href="\NoteRoom\public\css\nav_footer.css">
   @yield('styles')
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/noteroom/public/binder" ><img src="img/NRlogoblue.png" height="25" width="40"></a>
+    <a class="navbar-brand" href="{{ url('/') }}" ><img src="img/NRlogoblue.png" height="25" width="40"></a>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <div class="dropdown dropdown-accordion mr-auto" data-accordion="#accordion"> 
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding-bottom: 18px;">Home <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <div class="panel-group" id="accordion" style="margin-bottom: 0px;">
                 <div class="panel-heading">
@@ -63,7 +64,7 @@
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">[User Here] <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 1.5em;"></i></a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/NoteRoom/public/binder">My Binder</a></li>
             <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -76,6 +77,23 @@
   </nav>
 
 @yield('content')
+
+    <footer id="contact">
+        <div class="content-wrap">
+            <h4></h4>
+            <div class="footerElems">
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Our Team</a>
+            </div>
+            <p style="margin-bottom: 0;">Copyright 2017 by NoteRoomLLC</p>
+            <div class="logos">
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
 
   <script>
       $('.dropdown-accordion').on('show.bs.dropdown', function (event) {

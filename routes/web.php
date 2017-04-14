@@ -18,6 +18,16 @@
 |--------------------------------------------------------------------------
 |
 */
+
+Route::get('/', function () {
+	return view('welcome');
+});
+
+
 Route::get('/noteroom', function () {
 	return view('notes');
+});
+
+Route::get('/binder', function () {
+	return view('binder');
 });
