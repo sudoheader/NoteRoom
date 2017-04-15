@@ -15,7 +15,14 @@ var io = require('socket.io')(http);
 io.on('connection', function(socket){
     console.log('a user connected');
 
+   // io.emit('newUserUpdate');
+
+
+    socket.on('grabContent', data);
+
+
     
+
     socket.on('studentQuestion', function(data){ //first param is the name (chat message)
 
     io.emit('studentQuestion',data); //emmits studentQuestion on client side
@@ -30,6 +37,9 @@ io.on('connection', function(socket){
       /*keep these here just in case things go bad 
       socket.emit('dataToClient', data);
        io.emit('dataToClient', data);*/
+
+
+       // socket.emit('newUserUpdate', data.delta);
 
     	console.log('message is: '+ data.delta);
 

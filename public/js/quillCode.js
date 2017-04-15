@@ -20,9 +20,9 @@ var toolbarOptions = [
 
 
   var socket = io.connect( 'http://'+window.location.hostname+':3000' );
-
+  //socket.emit("connection");
   //var Delta = Quill.import('delta');
-
+  var newUser = true;
 
   var quill = new Quill('#editor', {
     modules: { toolbar: toolbarOptions },
@@ -53,11 +53,31 @@ var toolbarOptions = [
   });
 
 
-
+  //$('.ql-editor').hasClass("ql-blank") == means its empty
   socket.on('dataToClient', function(data){
 
+
           var del = JSON.parse(data.delta);
+        
           quill.updateContents(del); 
+            
           console.log('test');
-    
+  });
+
+
+  socket.on('grabContent', function(data){
+      if(!newUser){
+        emit('giveContent')
+      }
+
+ 
+
+        socket.emit('needsUpdate');
+      
+        
+
+        console.log('connection made');
+        // quill.setContents(data);
+
+
   });
