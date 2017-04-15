@@ -10,29 +10,37 @@ var io = require('socket.io')(http);
 // });
 
 
-
 //establishes the connection 
 io.on('connection', function(socket){
     console.log('a user connected');
-
+    
    // io.emit('newUserUpdate');
 
 
-    socket.on('grabContent', data);
+    //check to look for most updated notes
+    io.emit('checkAllNotes');
+   
+    socket.on('sendContents', function(contents){
 
+      socket.broadcast.emit('updateAll', contents);
 
-    
+    });
+  
+
 
     socket.on('studentQuestion', function(data){ //first param is the name (chat message)
 
     io.emit('studentQuestion',data); //emmits studentQuestion on client side
     console.log('message to server');
+
   });
 
     //handles what occurs when text is changed
     socket.on('textUp', function(data){
 
+
         socket.broadcast.emit('dataToClient', data);
+
 
       /*keep these here just in case things go bad 
       socket.emit('dataToClient', data);
@@ -40,10 +48,11 @@ io.on('connection', function(socket){
 
 
        // socket.emit('newUserUpdate', data.delta);
-
+       
     	console.log('message is: '+ data.delta);
-
+      
     });
+
 
 
 

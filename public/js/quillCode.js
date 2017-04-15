@@ -23,10 +23,35 @@ var toolbarOptions = [
   //socket.emit("connection");
   //var Delta = Quill.import('delta');
   var newUser = true;
+  var emptyEditor = true;
+
+
+
 
   var quill = new Quill('#editor', {
     modules: { toolbar: toolbarOptions },
     theme: 'snow'
+  });
+
+
+
+  //fires an update for the newest notes
+  socket.on('checkAllNotes', function(){
+
+    // quill.setContents( { insert: ''}] );
+
+    var contents = quill.getContents();
+
+     socket.emit('sendContents', contents);
+    console.log('contents', contents);
+
+  });
+
+
+  socket.on('updateAll', function(contents){
+      
+     // contents.ops[0] = '';
+      quill.updateContents(contents);
   });
 
 
@@ -65,15 +90,21 @@ var toolbarOptions = [
   });
 
 
+
+
+
   socket.on('grabContent', function(data){
-      if(!newUser){
-        emit('giveContent')
-      }
 
- 
 
-        socket.emit('needsUpdate');
-      
+      // if(!newUser){
+      //   emit('giveContent')
+      // }
+      // else{
+      //   var contents = 
+      //   quill.updateContents(data);
+      //   newUser = false;
+      // }
+
         
 
         console.log('connection made');
