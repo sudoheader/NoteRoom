@@ -38,11 +38,11 @@ var toolbarOptions = [
   //fires an update for the newest notes
   socket.on('checkAllNotes', function(){
 
-    // quill.setContents( { insert: ''}] );
+
 
     var contents = quill.getContents();
 
-     socket.emit('sendContents', contents);
+    socket.emit('sendContents', contents);
     console.log('contents', contents);
 
   });
@@ -50,8 +50,12 @@ var toolbarOptions = [
 
   socket.on('updateAll', function(contents){
       
-     // contents.ops[0] = '';
-      quill.updateContents(contents);
+    
+      if(($('.ql-editor').hasClass("ql-blank")))
+      {
+        quill.updateContents(contents); 
+      }
+
   });
 
 
@@ -69,7 +73,7 @@ var toolbarOptions = [
 
   quill.on('text-change', function(delta, oldDelta, source){
 
-    if(source == 'user'){ //source of the major bug
+    if(source == 'user'){ 
   
      socket.emit('textUp',  {'delta': JSON.stringify(delta)});
 
@@ -77,8 +81,6 @@ var toolbarOptions = [
  
   });
 
-
-  //$('.ql-editor').hasClass("ql-blank") == means its empty
   socket.on('dataToClient', function(data){
 
 
@@ -92,23 +94,3 @@ var toolbarOptions = [
 
 
 
-
-  socket.on('grabContent', function(data){
-
-
-      // if(!newUser){
-      //   emit('giveContent')
-      // }
-      // else{
-      //   var contents = 
-      //   quill.updateContents(data);
-      //   newUser = false;
-      // }
-
-        
-
-        console.log('connection made');
-        // quill.setContents(data);
-
-
-  });

@@ -10,23 +10,25 @@ var io = require('socket.io')(http);
 // });
 
 
+var users = [];
+
 //establishes the connection 
 io.on('connection', function(socket){
     console.log('a user connected');
-    
-   // io.emit('newUserUpdate');
 
+    users.push(socket.id);
 
-    //check to look for most updated notes
-    io.emit('checkAllNotes');
-   
+    //TODO -- who to update from if first user leaves?   
+
+    //we only update from the original host (for now)
+    socket.to(users[0]).broadcast.emit('checkAllNotes');
+
     socket.on('sendContents', function(contents){
 
       socket.broadcast.emit('updateAll', contents);
 
     });
   
-
 
     socket.on('studentQuestion', function(data){ //first param is the name (chat message)
 
@@ -53,7 +55,14 @@ io.on('connection', function(socket){
       
     });
 
+    //assign updates to next element in array...
+    socket.on('disconnect', function(){
 
+      users = users.slice(1,users.length-1);
+      console.log('User left :(');
+
+
+    });
 
 
 });
