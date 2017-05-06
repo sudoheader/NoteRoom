@@ -15,7 +15,6 @@ class CreateNotesTable extends Migration
     {
         Schema::create('noterooms_users', function (Blueprint $table) {
             $table->increments('id');
-            //$table->foreign('noteroom_id')->references('id')->on('noteroom')->onDelete('cascade');
             $table->longText('txt');
         });
             

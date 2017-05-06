@@ -17,9 +17,9 @@ class User extends Model
         return $this->belongsToMany('App\Role');
     }
 
-    public function roles()
+    public function noterooms()
     {
-        return $this->belongsToMany('App\noteroom');
+        return $this->belongsToMany('App\Noteroom');
     }
 }
 
