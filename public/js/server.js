@@ -2,14 +2,6 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-
-// app.get('/', function(req, res){
-// 	//res.sendFile(__dirname + '/index.php');
-// 	//res.sendFile('/public/index.php');
-//   res.sendFile('NoteRoom/resources/views/home.blade.php');
-// });
-
-
 var users = [];
 
 //establishes the connection 
