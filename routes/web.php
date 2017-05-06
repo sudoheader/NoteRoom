@@ -22,4 +22,9 @@ Route::get('/noteroom', function () {
 	return view('notes');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
 Route::get("create", 'testing@index');
+
