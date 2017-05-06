@@ -13,7 +13,7 @@ class CreateNoteroomUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('noteroom_user', function(Blueprint $table)
+        Schema::create('noteroom_user', function(Blueprint $table)
         {
             $table->increments('id');
             $table->foreign('noteroom_id')->references('id')->on('noteroom');
