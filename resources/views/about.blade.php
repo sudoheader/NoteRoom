@@ -42,16 +42,19 @@
                 </h3>
                 <p>test</p>
             </div>
+        </div>
+
+        <div class="row">
             
-            <div class="col-lg-6 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <div class="col-lg-6 col-sm-5 text-center" >
+                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="" >
                 <h3>Aryan 
                     <small></small>
                 </h3>
                 <p>test</p>
             </div>
-            <div class="col-lg-6 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
+            <div class="col-lg-6 col-sm-5 text-center">
+                <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="" >
                 <h3>Ray
                     <small>Security dood</small>
                 </h3>

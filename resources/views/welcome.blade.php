@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +22,12 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+            }
+            
+            img{
+                margin:auto; 
+                height:200px;
+                width:200px;
             }
 
             .full-height {
@@ -45,8 +55,8 @@
             }
 
             .title {
-                font-size: 84px;
-                color: white;
+                font-size: 120px;
+                color: #337ab7;
             }
 
             .links > a {
@@ -111,6 +121,13 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+
+            .team h3, .team p{
+                color:white;
+                font-weight:600;
+            }
+
+
         </style>
     </head>
 
@@ -189,9 +206,52 @@
                 </div>
         </section>
         <div class="parallax3" id="team">
-            <div class = "flex-center position-ref full-height">
-            The Team
+            <div class="container">
+
+
+        <!-- Team Members Row -->
+        <div class="row team" style="margin-top:100px;">
+            <div class="col-lg-12">
             </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="img/xtian.png" alt="" >
+                <h3>Christian Trinidad
+                </h3>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="img/gabe.png" alt="" >
+                <h3>Gabriel Alabastro
+                </h3>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="img/nan.png" alt="" >
+                <h3>Anando Allahuakbar
+                </h3>
+                <p>Back End Developer</p>
+            </div>
+        </div>
+
+        <div class="row team" style="margin-top:50px;">
+            
+            <div class="col-lg-6 col-sm-5 text-center" >
+                <img class="img-circle img-responsive img-center" src="img/ary.png" alt="">
+                <h3>Aryan 
+                </h3>
+                <p>Front End Developer</p>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-center">
+                <img class="img-circle img-responsive img-center" src="img/ray.png" alt="">
+                <h3>Ray
+                </h3>
+                <p>Back End Developer</p>
+            </div>
+           
+        </div>
+
+    </div>
+
         </div>
 
         <section class = "section section-white">
