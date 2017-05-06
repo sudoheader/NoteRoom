@@ -143,6 +143,7 @@
             </div>
         </div>
 
+
         <section class = "section section-white">
                 <div class="container white-space" style="display: block; text-align: center;">
                     <div class="row">
@@ -152,13 +153,15 @@
                            
                         </div>
                     </div>
-                </div>
+
+            
         </section>
         <div class="parallax1" id="about">
             <div class = "flex-center position-ref full-height">
             Aboot
             </div>
         </div>
+
 
         <section class = "section section-white">
                 <div class="container white-space" style="display: block; text-align: center;">
@@ -167,7 +170,8 @@
                             <div class="split">What is NoteRoom?</div>
                         </div>
                     </div>
-                </div>
+
+               
         </section>
         <div class="parallax2" id="explain">
             <div class = "flex-center position-ref full-height">

@@ -18,6 +18,12 @@
 |--------------------------------------------------------------------------
 |
 */
+
+Route::get('/', function () {
+	return view('welcome');
+});
+
+
 Route::get('/noteroom', function () {
 	return view('notes');
 });
@@ -25,6 +31,9 @@ Route::get('/noteroom', function () {
 Route::get('/binder', function () {
     return view('binder');
 });
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/about', function () {
+	return view('about');
 });
+

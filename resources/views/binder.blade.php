@@ -1,10 +1,82 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+@extends('layouts.master')
+    
+@section('title', 'Binder Page')
+
+@section('content')
 
 
-MUHFUCKN BINDER
-<br></br>
-<a href="/noteroom/public/noteroom" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Back to NoteRoom</a>
+<link rel= "stylesheet" href="\NoteRoom\public\css\binder_page.css">
+
+
+
+<div class="container-fluid">
+
+
+<div class="binder_content">
+	
+	
+
+	{{-- <div class="box"> --}}
+		
+
+
+<div class="col-sm-6">
+	
+	<div class="panel panel-info">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">Your Classes</div>
+	  <div class="panel-body binder">
+	    <ul class = "subjects">
+
+	    	<h2><a href="">	COMP 380</a></h2>
+	    	<h2><a href="">	COMP 333</a></h2>
+	    	<h2><a href="">	COMP 322</a></h2>
+			
+
+
+	    </ul>
+
+
+	  </div>
+
+	 
+	</div>
+	
+</div>
+
+
+<div class="col-sm-6">
+	
+	<div class="panel panel-info">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading">Your Notes</div>
+
+	  <div class="panel-body binder">
+
+	    <h3>
+	    	You currently have no notes...
+	    </h3>
+	  </div>
+
+	 
+	</div>
+	
+</div>
+
+	{{-- <img src="img/binderPic.png" style='width:100%; height:100%;' border="0" alt="Null"> --}}
+
+
+	{{-- </div> --}}
+
+</div>
+
+	
+</div>
+
+
+
+
+
+@stop
+>>>>>>> origin/noteroom-9
