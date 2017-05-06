@@ -21,3 +21,11 @@
 Route::get('/noteroom', function () {
 	return view('notes');
 });
+
+Route::get('/noteroom', function () {
+    return view('noteroom');
+});
+
+Route::get('/binder', function () {
+    return view('binder');
+});
