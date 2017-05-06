@@ -49,6 +49,12 @@
                 color: white;
             }
 
+            h1 {
+                font-weight: bold;
+                font-size: 200px;
+                color: white;
+            }
+
             .links > a {
                 color: #4d9dff;
                 padding: 0 25px;
@@ -69,6 +75,11 @@
 
             .section-white{
                 height: 100px;
+            }
+
+            .contax{
+                text-align: center;
+                padding-top: 15%;
             }
 
             .parallax { 
@@ -111,6 +122,9 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+
+        
+            x
         </style>
     </head>
 
@@ -119,7 +133,7 @@
             <div class="parallax">
                 <div class="flex-center position-ref full-height">
                     @if (Route::has('login'))
-                        <div class="top-right links">
+                        <div class="top-right links" style="z-index: 20;">
                             @if (Auth::check())
                                 <a href="{{ url('/home') }}">Home</a>
                             @else
@@ -149,7 +163,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             
-                                <div class="split">About</div>
+                                <div class="split">About.</div>
                            
                         </div>
                     </div>
@@ -183,7 +197,7 @@
                 <div class="container white-space" style="display: block; text-align: center;">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="split">Meet the Team</div>
+                            <div class="split">Meet the Team.</div>
                         </div>
                     </div>
                 </div>
@@ -198,14 +212,16 @@
                 <div class="container white-space" style="display: block; text-align: center;">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="split">Contact Us</div>
+                            <div class="split">Contact Us.</div>
                         </div>
                     </div>
                 </div>
         </section>
+           
         <div class="parallax4" id="contact">
-            <div class = "flex-center position-ref full-height">
-            Phone numbers
+            <div class="contax">
+                <h1>Email Us</h1>
+                <h3><a href="mailto:info@noteroom.com" style="color: white">info@noteroom.com</a></h3>
             </div>
         </div>
 

@@ -54,7 +54,7 @@
 
 	  <div class="panel-body binder">
 
-	    <h3>
+	    <h3 style="text-align: center;">
 	    	You currently have no notes...
 	    </h3>
 	  </div>
