@@ -56,7 +56,7 @@
 
             .title {
                 font-size: 120px;
-                color: #337ab7;
+                color: white;
             }
 
             h1 {
@@ -65,14 +65,21 @@
                 color: white;
             }
 
+            h3:hover{
+                font-size:40px;
+            }
+
             .links > a {
-                color: #4d9dff;
+                color: white;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 20px;
                 font-weight: 900;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+            }
+            .links > a:hover{
+               font-size: 30px;
             }
 
             .m-b-md {
@@ -146,6 +153,16 @@
                 font-weight:600;
             }
 
+            .img-circle{
+                border: 2px solid #fff;
+            }
+
+            .desc{
+                font-weight:bold;
+                font-size:75px;
+                color:white;
+                text-align:center;
+            }
 
         </style>
     </head>
@@ -193,8 +210,10 @@
             
         </section>
         <div class="parallax1" id="about">
-            <div class = "flex-center position-ref full-height">
-            Aboot
+            <div class = "flex-center position-ref full-height desc">
+                <p> 
+                    NoteRoom was inspired as a result of having issues with taking notes the old fashioned way. <br>    Current collaborative apps were not good enough, so the team got to work.
+                </p>
             </div>
         </div>
 
