@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Noteroom extends Model
 {
     /**
      * The users that belong to the role.

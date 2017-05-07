@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         $f = $faker->firstName;
         $l = $faker->lastName;
         DB::table('users')->insert([
-
             'name' => $f.','. $l,
+            'username' => $f.$l,
             'email' => $f.'.'. $l.'.'. $faker->biasedNumberBetween($min = 100, $max = 999).'@my.csun.edu',
             'password' => bcrypt('secret'),
         ]);

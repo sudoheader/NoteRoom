@@ -28,13 +28,9 @@
 	  <div class="panel-heading">Your Classes</div>
 	  <div class="panel-body binder">
 	    <ul class = "subjects">
-
-	    	<h2><a href="">	COMP 380</a></h2>
-	    	<h2><a href="">	COMP 333</a></h2>
-	    	<h2><a href="">	COMP 322</a></h2>
-			
-
-
+			@foreach ($user->noterooms as $noteroom)
+				{{$noteroom->title}}
+			@endforeach
 	    </ul>
 
 
