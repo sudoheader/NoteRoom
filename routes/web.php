@@ -27,8 +27,28 @@ Route::get('/userdashboard', 'UserController@dashboard');
 |--------------------------------------------------------------------------
 |
 */
+
+Route::get('/', function () {
+	return view('welcome');
+});
+
+
 Route::get('/noteroom', function () {
 	return view('notes');
+});
+
+
+Route::get('/binder', function () {
+    return view('binder');
+});
+
+
+Route::get('/about', function () {
+	return view('about');
+});
+
+Route::get('/login', function () {
+	return view('login')->name('login');
 });
 
 Auth::routes();
