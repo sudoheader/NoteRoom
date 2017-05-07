@@ -91,6 +91,14 @@
                 text-align: center;
                 padding-top: 15%;
             }
+            
+            .desc2{
+                font-weight: bold;
+                font-size: 75px;
+                color:#6e8f3d; /*#97a25e;*/
+                text-align: left;
+                padding-left: 10px;
+            }
 
             .parallax { 
                 background-image: url("img/csunov.jpg");
@@ -202,8 +210,8 @@
                
         </section>
         <div class="parallax2" id="explain">
-            <div class = "flex-center position-ref full-height">
-            Explain NoteRoom
+            <div class = "flex-center position-ref full-height desc2">
+            NoteRoom tailors collaborative notetaking for the classroom.<br>It is created by students for students.
             </div>
         </div>
 
@@ -218,51 +226,43 @@
         </section>
         <div class="parallax3" id="team">
             <div class="container">
-
-
-        <!-- Team Members Row -->
-        <div class="row team" style="margin-top:100px;">
-            <div class="col-lg-12">
+                <div class="row team" style="margin-top:5%;">
+                    <div class="col-lg-12">
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center">
+                        <img class="img-circle img-responsive img-center" src="img/xtian.png" alt="" >
+                        <h3>Christian Trinidad
+                        </h3>
+                        <p>Full Stack Developer</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center">
+                        <img class="img-circle img-responsive img-center" src="img/gabe.png" alt="" >
+                        <h3>Gabriel Alabastro
+                        </h3>
+                        <p>Full Stack Developer</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center">
+                        <img class="img-circle img-responsive img-center" src="img/nan.png" alt="" >
+                        <h3>Anando Allahuakbar
+                        </h3>
+                        <p>Back End Developer</p>
+                    </div>
+                </div>
+                <div class="row team" style="margin-top:5%;">
+                    <div class="col-lg-6 col-sm-5 text-center" >
+                        <img class="img-circle img-responsive img-center" src="img/ary.png" alt="">
+                        <h3>Aryan Mokhber
+                        </h3>
+                        <p>Front End Developer</p>
+                    </div>
+                    <div class="col-lg-6 col-sm-5 text-center">
+                        <img class="img-circle img-responsive img-center" src="img/ray.png" alt="">
+                        <h3>Ray
+                        </h3>
+                        <p>Back End Developer</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/xtian.png" alt="" >
-                <h3>Christian Trinidad
-                </h3>
-                <p>Full Stack Developer</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/gabe.png" alt="" >
-                <h3>Gabriel Alabastro
-                </h3>
-                <p>Full Stack Developer</p>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <img class="img-circle img-responsive img-center" src="img/nan.png" alt="" >
-                <h3>Anando Allahuakbar
-                </h3>
-                <p>Back End Developer</p>
-            </div>
-        </div>
-
-        <div class="row team" style="margin-top:50px;">
-            
-            <div class="col-lg-6 col-sm-5 text-center" >
-                <img class="img-circle img-responsive img-center" src="img/ary.png" alt="">
-                <h3>Aryan 
-                </h3>
-                <p>Front End Developer</p>
-            </div>
-            <div class="col-lg-6 col-sm-5 text-center">
-                <img class="img-circle img-responsive img-center" src="img/ray.png" alt="">
-                <h3>Ray
-                </h3>
-                <p>Back End Developer</p>
-            </div>
-           
-        </div>
-
-    </div>
-
         </div>
 
         <section class = "section section-white">
