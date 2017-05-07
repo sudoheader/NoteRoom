@@ -260,7 +260,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center">
                         <img class="img-circle img-responsive img-center" src="img/nan.png" alt="" >
-                        <h3>Anando Allahuakbar
+                        <h3>Anando Mahbubah
                         </h3>
                         <p>Back End Developer</p>
                     </div>
@@ -274,7 +274,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-5 text-center">
                         <img class="img-circle img-responsive img-center" src="img/ray.png" alt="">
-                        <h3>Ray
+                        <h3>Raymond Nazaryan
                         </h3>
                         <p>Back End Developer</p>
                     </div>
