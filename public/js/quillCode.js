@@ -20,13 +20,42 @@ var toolbarOptions = [
 
 
   var socket = io.connect( 'http://'+window.location.hostname+':3000' );
-
+  //socket.emit("connection");
   //var Delta = Quill.import('delta');
+  var newUser = true;
+  var emptyEditor = true;
+
+
 
 
   var quill = new Quill('#editor', {
     modules: { toolbar: toolbarOptions },
     theme: 'snow'
+  });
+
+
+
+  //fires an update for the newest notes
+  socket.on('checkAllNotes', function(){
+
+
+
+    var contents = quill.getContents();
+
+    socket.emit('sendContents', contents);
+    console.log('contents', contents);
+
+  });
+
+
+  socket.on('updateAll', function(contents){
+      
+    
+      if(($('.ql-editor').hasClass("ql-blank")))
+      {
+        quill.updateContents(contents); 
+      }
+
   });
 
 
@@ -44,7 +73,7 @@ var toolbarOptions = [
 
   quill.on('text-change', function(delta, oldDelta, source){
 
-    if(source == 'user'){ //source of the major bug
+    if(source == 'user'){ 
   
      socket.emit('textUp',  {'delta': JSON.stringify(delta)});
 
@@ -52,12 +81,16 @@ var toolbarOptions = [
  
   });
 
-
-
   socket.on('dataToClient', function(data){
 
+
           var del = JSON.parse(data.delta);
+        
           quill.updateContents(del); 
+            
           console.log('test');
-    
   });
+
+
+
+
