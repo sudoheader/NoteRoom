@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Noteroom;
 use Auth;
 
 class BinderController extends Controller
@@ -15,11 +16,8 @@ class BinderController extends Controller
      */
     public function dashboard() {
         // this pulls the relationship between a user and noterooms
-        $users = User::findOrFail(Auth::id)->with('noterooms')->get();
-        $noterooms = $users['noteroom']->toArray();
-        // return view with noterooms
-        // this is going to be added for this
-        // return view();
+        $user = User::with('noterooms')->findOrFail(Auth::user()->id);
+        return view('binder', compact('user'));
     }
 
     /**

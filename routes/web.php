@@ -38,10 +38,11 @@ Route::get('/noteroom', function () {
 });
 
 
-Route::get('/binder', function () {
-    return view('binder');
-});
+// Route::get('/binder', function () {
+//     return view('binder');
+// });
 
+Route::get('/binder', 'BinderController@dashboard');
 
 Route::get('/about', function () {
 	return view('about');
