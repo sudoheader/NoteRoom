@@ -160,7 +160,7 @@
             .desc{
                 font-weight:bold;
                 font-size:75px;
-                color:#f1e260;
+                color:#ebd514;/*#f1e260;*/
                 text-align:center;
             }
 
