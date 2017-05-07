@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
 
-class testing extends Controller
+class UserController extends Controller
 {
+    public function dashboard() {
+        $user = User::findOrFail(Auth::user()->id)->with('noterooms')->first();
+        return $user;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +20,8 @@ class testing extends Controller
      */
     public function index()
     {
-        return view("create") ;   }
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -44,7 +52,9 @@ class testing extends Controller
      */
     public function show($id)
     {
-        //
+        // this might be a dashboard for the user
+        $user = User::findOrFail($id)->with('noterooms')->first();
+        return $user;
     }
 
     /**
@@ -67,9 +77,7 @@ class testing extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            // this is going to be where the inputs for making a new noteroom
-        ]);
+        //
     }
 
     /**

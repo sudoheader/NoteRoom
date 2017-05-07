@@ -3,9 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
-class testing extends Controller
+class BinderController extends Controller
 {
+    /**
+     * Display the home page for a user
+     * 
+     * @return \Illuminate\Http\Response 
+     */
+    public function dashboard() {
+        // this pulls the relationship between a user and noterooms
+        $users = User::findOrFail(Auth::id)->with('noterooms')->get();
+        $noterooms = $users['noteroom']->toArray();
+        // return view with noterooms
+        // this is going to be added for this
+        // return view();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +29,8 @@ class testing extends Controller
      */
     public function index()
     {
-        return view("create") ;   }
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -67,9 +84,7 @@ class testing extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            // this is going to be where the inputs for making a new noteroom
-        ]);
+        //
     }
 
     /**
