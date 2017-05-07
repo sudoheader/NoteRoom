@@ -28,6 +28,7 @@ Route::get('/noteroom', function () {
 	return view('notes');
 });
 
+
 Route::get('/binder', function () {
     return view('binder');
 });
@@ -40,3 +41,10 @@ Route::get('/about', function () {
 Route::get('/login', function () {
 	return view('login')->name('login');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get("create", 'testing@index');
+
