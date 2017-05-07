@@ -140,7 +140,7 @@
                 background-size: cover;
             }
             .parallax4 { 
-                background-image: url("img/phone.jpg");
+                background-image: url("img/mail.jpg");
                 height: 100%; 
                 background-attachment: fixed;
                 background-position: center;
@@ -160,7 +160,7 @@
             .desc{
                 font-weight:bold;
                 font-size:75px;
-                color:white;
+                color:#f1e260;
                 text-align:center;
             }
 
