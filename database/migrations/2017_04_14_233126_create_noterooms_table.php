@@ -17,7 +17,7 @@ class CreateNoteroomsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->integer('note_id')->unsigned();
-            $table->foreign('note_id')->references('id')->on('notes');
+            
             $table->string('invite_id');
         });
 
